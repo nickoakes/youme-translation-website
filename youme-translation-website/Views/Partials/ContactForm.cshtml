@@ -1,0 +1,14 @@
+﻿@inherits UmbracoViewPage<youme_website.Models.FormViewModel>
+
+@using (Html.BeginUmbracoForm<youme_website.Controllers.FormSurfaceController>("Submit", "ContactForm"))
+{
+    <div>
+        @Html.TextBoxFor(m => m.Name)
+    </div>
+    <div>
+        @Html.TextBoxFor(m => m.Email)
+    </div>
+    <div>
+        @Html.TextAreaFor(m => m.Message)
+    </div>
+}

@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ErrorNotFound>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Website.cshtml";
+    var selection = Model;
+}
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12 text-center">
+            @if (selection.HasValue("mainErrorMessage") && selection.Value("mainErrorMessage") != null)
+            {
+                <h1>@selection.Value("mainErrorMessage")</h1>
+            }
+
+            @if (selection.HasValue("secondaryErrorMessage") && selection.Value("secondaryErrorMessage") != null)
+            {
+                <h3>@selection.Value("secondaryErrorMessage")</h3>
+            }
+        </div>
+    </div>
+</div>

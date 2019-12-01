@@ -1,0 +1,10 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.Home>
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Website.cshtml";
+    var selection = Model;
+}
+
+<div class="jumbotron">
+    <h1 class="display-4 text-center">@selection.Value("jumbotronText")</h1>
+</div>

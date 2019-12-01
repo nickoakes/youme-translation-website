@@ -1,0 +1,11 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{ 
+    var selection = Model;
+}
+
+    <footer id="sticky-footer" class="py-4">
+        <div class="container text-left">
+            <small>&copy; @(selection.HasValue("copyrightName") && selection.Value("copyrightName") != null ? selection.Value("copyrightName") : "") &nbsp; &nbsp; @DateTime.Now.Year</small>
+        </div>
+    </footer>

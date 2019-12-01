@@ -1,0 +1,27 @@
+﻿/****************************
+    손유미의 영상번역 웹사이트
+    style.css
+****************************/
+
+html, body
+{
+    height: 100%;
+}
+
+.header-body-content
+{
+    flex: 1 0 auto;
+}
+
+#sticky-footer
+{
+    flex-shrink: 0;
+    background-color: lightskyblue;
+    color: #fff;
+}
+
+.jumbotron 
+{
+    background-color: lightskyblue;
+    color: #fff;
+}
