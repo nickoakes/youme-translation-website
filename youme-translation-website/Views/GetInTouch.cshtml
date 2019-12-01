@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+@using ContentModels = Umbraco.Web.PublishedModels;
+@{
+	Layout = "Website.cshtml";
+    var selection = Model;
+}
+
+<div class="container">
+    @if(TempData["SuccessResult"] != null && (bool)TempData["SuccessResult"])
+    {
+        <h3>@selection.Value("successMessage")</h3>
+    }
+    else
+    {
+        Html.RenderAction("ContactForm", "FormSurface");
+    }
+</div>

@@ -457,6 +457,7 @@
     <Content Include="Views\ErrorNotFound.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\Website.cshtml" />
+    <Content Include="Views\GetInTouch.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

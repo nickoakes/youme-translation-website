@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "b0ad430ab7abfcc3")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "a3a79ce85f332acb")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -80,7 +80,7 @@ namespace Umbraco.Web.PublishedModels
 		public string JumbotronText => this.Value<string>("jumbotronText");
 	}
 
-	/// <summary>ErrorNotFound</summary>
+	/// <summary>Error Not Found</summary>
 	[PublishedModel("errorNotFound")]
 	public partial class ErrorNotFound : PublishedContentModel
 	{
@@ -118,6 +118,39 @@ namespace Umbraco.Web.PublishedModels
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
 		[ImplementPropertyType("secondaryErrorMessage")]
 		public string SecondaryErrorMessage => this.Value<string>("secondaryErrorMessage");
+	}
+
+	/// <summary>Get In Touch</summary>
+	[PublishedModel("getInTouch")]
+	public partial class GetInTouch : PublishedContentModel
+	{
+		// helpers
+#pragma warning disable 0109 // new is redundant
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const string ModelTypeAlias = "getInTouch";
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public new static IPublishedContentType GetModelContentType()
+			=> PublishedModelUtility.GetModelContentType(ModelItemType, ModelTypeAlias);
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		public static IPublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<GetInTouch, TValue>> selector)
+			=> PublishedModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+#pragma warning restore 0109
+
+		// ctor
+		public GetInTouch(IPublishedContent content)
+			: base(content)
+		{ }
+
+		// properties
+
+		///<summary>
+		/// Success Message
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder", "8.1.0")]
+		[ImplementPropertyType("successMessage")]
+		public string SuccessMessage => this.Value<string>("successMessage");
 	}
 
 	/// <summary>Folder</summary>
